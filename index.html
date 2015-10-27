@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Баба</title>
+		<script src="js.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body onload="parseXML()">
+		<table id="Data" border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td>id</td>
+				<td>Имя</td>
+				<td>Описание</td>
+				<td>Значение</td>
+				<td> </td>
+			</tr>
+		</table>
+		<div>
+			<input type="text" placeholder="id" id="newid">
+			<input type="text" placeholder="name" id="newName">
+			<input type="text" placeholder="discription" id="newDescription">	
+			<select size="1" id="newType">
+			<option value="System.String">String</option>
+			<option value="System.Int32">Int32</option>
+			<option value="System.Boolean">Boolean</option>
+			</select>
+			<input type="button" value=" Добавить " onclick="addRow()">
+   		</div>
+		<p><input type="button" value=" Генерируем XML " onclick="generateXML( 'output.xml', 'text/plain')">
+		<a href="" style="display:none" id="download_link">output.xml</a></p>
+	</body>
+</html>
